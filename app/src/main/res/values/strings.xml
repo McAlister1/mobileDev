@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">Forum Prototype</string>
+    <string name="breadcrumbs.91">Select class / CS991 forum</string>
+    <string name="breadcrumbs.select">Select class </string>
+    <string name="breadcrumbs.forumPostDisplay">Select class / CS991 forum / post title</string>
+    <string name="student_name">STUDENT NAME</string>
+    <string name="announcements">Announcements</string>
+    <string name="module_name">CS991</string>
+    <string name="forum_posts">Forum Posts</string>
+    <string name="back_button">←</string>
+    <string name="add_button">Add post</string>
+    <string name="edit_button">Edit post</string>
+    <string-array name="student_spinner">
+        <item>STUDENT NAME ▼</item>
+        <item>Select class</item>
+        <item>Edit post</item>
+        <item>Remove post</item>
+        <item>Settings</item>
+        <item>Logout</item>
+    </string-array>
+    <string-array name="filter_spinner">
+        <item>Filter Posts ▼</item>
+        <item>Date</item>
+        <item>Popular</item>
+        <item>Read</item>
+    </string-array>
+    <string-array name="announcements_display">
+        <item>Announcement 1</item>
+        <item>Announcement 2</item>
+        <item>Announcement 3</item>
+    </string-array>
+
+    <string name="forum">Forum</string>
+    <string name="todo">TODO</string>
+    <string name="Welcome">Welcome to the University of Strathclyde \n Forum App!</string>
+    <string name="Username">Enter your Username</string>
+    <string name="Password">Enter your Password</string>
+    <string name="Login_Details">Remember my Login Details</string>
+    <string name="Login">Login Button</string>
+    <string name="Forgotten_Username">Forgotten my Username</string>
+    <string name="Forgotten_Password">Forgotten my Password</string>
+
+
+    <string name="SelectModule">Select Module</string>
+
+    <string name="CS991">CS991 - Mobile App Development</string>
+
+    <string name="CS992">CS992 - Database Development</string>
+
+    <string name="CS993">CS993 - Software Engineering</string>
+
+    <string name="Forumpage">CS991 Forum</string>
+
+
+    -
+    <string name="ForumPostQuestion">
+
+<b>Clarification on Project</b>
+-
+<i>Joe Bloggs</i>
+\nI am having x problem with the project
+</string>
+
+    <string name="editButtonText">Edit</string>
+
+    <string name="deleteButtonText">Delete</string>
+
+    <string name="likeButtonText">Like</string>
+
+
+    -
+    <string name="comments">
+
+<b>Comments</b>
+
+</string>
+
+
+    -
+    <string-array name="filterOptions">
+
+        <item>Filters</item>
+
+        <item>Oldest to Newest</item>
+
+        <item>Newest to Oldest</item>
+
+        <item>Unread comments</item>
+
+    </string-array>
+
+
+    -
+    <string name="comment1">
+Hi Joe, you could try this approach...\n
+<i>Sarah Brown</i>
+
+</string>
+
+
+    -
+    <string name="comment2">
+I tried ... and it worked \n
+<i>Natalie Smith</i>
+
+</string>
+
+    <string name="reply">Reply</string>
+
+    <string name="like">Like</string>
+
+
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    -<RelativeLayout android:layout_height="32dp" android:layout_width="258dp" app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent" android:layout_gravity="bottom">
+
+    <Spinner android:layout_height="match_parent" android:layout_width="114dp" android:layout_gravity="center" android:padding="5dp" android:entries="@array/student_spinner" android:background="#ded8d7" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" android:id="@+id/studentSpinner"/>
+
+</RelativeLayout>
+
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent" android:id="@+id/forumText" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.104" android:text="@string/Forumpage" android:layout_marginTop="28dp"/>
+
+    <EditText android:layout_height="123dp" android:layout_width="284dp" app:layout_constraintEnd_toEndOf="parent" android:id="@+id/editTextInitialQuestion" app:layout_constraintStart_toStartOf="parent" android:text="@string/ForumPostQuestion" android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/forumText" android:inputType="textMultiLine" android:gravity="start|top" android:ems="10"/>
+
+    <Button android:layout_height="46dp" android:layout_width="74dp" app:layout_constraintEnd_toEndOf="@+id/editTextInitialQuestion" android:id="@+id/editPostButton" android:text="@string/editButtonText" app:layout_constraintBaseline_toBaselineOf="@+id/deleteButton" android:textColor="#0000FF" style="?android:attr/borderlessButtonStyle"/>
+
+    <Button android:layout_height="48dp" android:layout_width="90dp" android:id="@+id/deleteButton" android:text="@string/deleteButtonText" android:textColor="#0000FF" style="?android:attr/borderlessButtonStyle" app:layout_constraintEnd_toStartOf="@+id/editPostButton" app:layout_constraintBottom_toBottomOf="@+id/editTextInitialQuestion"/>
+
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/commentsTextView" app:layout_constraintStart_toStartOf="parent" android:text="@string/comments" android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/editTextInitialQuestion" android:layout_marginLeft="64dp" android:layout_marginStart="64dp"/>
+
+    <Spinner android:layout_height="27dp" android:layout_width="156dp" app:layout_constraintEnd_toEndOf="parent" android:entries="@array/filterOptions" android:id="@+id/spinner" app:layout_constraintHorizontal_bias="0.081" app:layout_constraintBaseline_toBaselineOf="@+id/commentsTextView" app:layout_constraintStart_toEndOf="@+id/commentsTextView"/>
+
+    <EditText android:layout_height="119dp" android:layout_width="279dp" app:layout_constraintEnd_toEndOf="parent" android:id="@+id/editTextComment1" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.484" android:text="@string/comment1" android:layout_marginTop="40dp" app:layout_constraintTop_toBottomOf="@+id/spinner" android:inputType="textMultiLine" android:gravity="start|top" android:ems="10"/>
+
+    <EditText android:layout_height="119dp" android:layout_width="279dp" app:layout_constraintEnd_toEndOf="parent" android:id="@+id/editTextComment2" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.484" android:text="@string/comment2" app:layout_constraintTop_toBottomOf="@+id/editTextComment1" android:inputType="textMultiLine" android:gravity="start|top" android:ems="10"/>
+
+    <Button android:layout_height="42dp" android:layout_width="73dp" android:id="@+id/likeButton2" android:text="@string/like" app:layout_constraintBaseline_toBaselineOf="@+id/replyButton" android:textColor="#0000FF" style="?android:attr/borderlessButtonStyle" app:layout_constraintEnd_toStartOf="@+id/replyButton"/>
+
+    <Button android:layout_height="43dp" android:layout_width="73dp" app:layout_constraintEnd_toEndOf="@+id/editTextComment1" android:id="@+id/replyButton" android:text="@string/reply" android:textColor="#0000FF" style="?android:attr/borderlessButtonStyle" app:layout_constraintBottom_toBottomOf="@+id/editTextComment1"/>
+
+    <Button android:layout_height="48dp" android:layout_width="76dp" app:layout_constraintEnd_toEndOf="@+id/editTextComment2" android:id="@+id/replyButton2" android:text="@string/reply" android:textColor="#0000FF" style="?android:attr/borderlessButtonStyle" app:layout_constraintBottom_toBottomOf="@+id/editTextComment2"/>
+
+    <Button android:layout_height="46dp" android:layout_width="71dp" android:id="@+id/likeButton" android:text="@string/like" app:layout_constraintBaseline_toBaselineOf="@+id/replyButton2" android:textColor="#0000FF" style="?android:attr/borderlessButtonStyle" app:layout_constraintEnd_toStartOf="@+id/replyButton2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
