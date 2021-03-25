@@ -121,21 +121,22 @@
         app:layout_constraintEnd_toStartOf="@+id/replyButton"/>
 
     <Button
-        android:layout_height="43dp"
-        android:layout_width="73dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextComment1"
-        android:id="@+id/replyButton" android:text="@string/reply"
-        app:backgroundTint="@color/blue"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextComment1"/>
-
-    <Button
-        android:layout_height="48dp"
-        android:layout_width="76dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextComment2"
-        android:id="@+id/replyButton2"
+        android:id="@+id/replyButton"
+        android:layout_width="80dp"
+        android:layout_height="42dp"
         android:text="@string/reply"
         app:backgroundTint="@color/blue"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextComment2"/>
+        app:layout_constraintBottom_toBottomOf="@+id/editTextComment1"
+        app:layout_constraintEnd_toEndOf="@+id/editTextComment1" />
+
+    <Button
+        android:id="@+id/replyButton2"
+        android:layout_width="82dp"
+        android:layout_height="45dp"
+        android:text="@string/reply"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextComment2"
+        app:layout_constraintEnd_toEndOf="@+id/editTextComment2" />
 
     <Button
         android:layout_height="46dp"
