@@ -12,7 +12,7 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
-        android:layout_height="341dp"
+        android:layout_height="250dp"
         app:srcCompat="@drawable/university_of_strathclyde_logo"
         android:contentDescription="@string/todo" />
 
@@ -49,21 +49,22 @@
         android:text="@string/Login_Details" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonLogin"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="@string/Login"
-        app:backgroundTint="#33C12E" />
+        app:backgroundTint="#33C12E"
+        />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonForgottenUsername"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="@string/Forgotten_Username"
         app:backgroundTint="#3F51B5" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonForgottenPassword"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="@string/Forgotten_Password"
