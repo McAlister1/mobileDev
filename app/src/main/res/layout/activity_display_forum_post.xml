@@ -48,20 +48,22 @@
         android:ems="10"/>
 
     <Button
-        android:layout_height="46dp"
-        android:layout_width="74dp"
+        android:layout_height="45dp"
+        android:layout_width="80dp"
         app:layout_constraintEnd_toEndOf="@+id/editTextInitialQuestion"
         android:id="@+id/editPostButton"
         android:text="@string/editButtonText"
         app:layout_constraintBaseline_toBaselineOf="@+id/deleteButton"
-        app:backgroundTint="@color/blue"/>
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"/>
 
     <Button
-        android:layout_height="48dp"
-        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_width="88dp"
         android:id="@+id/deleteButton"
         android:text="@string/deleteButtonText"
-        app:backgroundTint="@color/blue"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/editPostButton"
         app:layout_constraintBottom_toBottomOf="@+id/editTextInitialQuestion"/>
 
@@ -100,10 +102,10 @@
         android:ems="10"/>
 
     <EditText
+        android:id="@+id/editTextComment2"
         android:layout_height="119dp"
         android:layout_width="279dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:id="@+id/editTextComment2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         android:text="@string/comment2"
@@ -112,39 +114,44 @@
         android:gravity="start|top"
         android:ems="10"/>
 
-    <Button android:layout_height="42dp"
-        android:layout_width="73dp"
+    <Button
         android:id="@+id/likeButton2"
+        android:layout_height="45dp"
+        android:layout_width="80dp"
         android:text="@string/like"
         app:layout_constraintBaseline_toBaselineOf="@+id/replyButton"
-        app:backgroundTint="@color/blue"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/replyButton"/>
 
     <Button
         android:id="@+id/replyButton"
+        android:layout_height="45dp"
         android:layout_width="80dp"
-        android:layout_height="42dp"
         android:text="@string/reply"
-        app:backgroundTint="@color/blue"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/editTextComment1"
         app:layout_constraintEnd_toEndOf="@+id/editTextComment1" />
 
     <Button
         android:id="@+id/replyButton2"
-        android:layout_width="82dp"
         android:layout_height="45dp"
+        android:layout_width="80dp"
         android:text="@string/reply"
-        app:backgroundTint="@color/blue"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/editTextComment2"
         app:layout_constraintEnd_toEndOf="@+id/editTextComment2" />
 
     <Button
-        android:layout_height="46dp"
-        android:layout_width="71dp"
         android:id="@+id/likeButton"
+        android:layout_height="45dp"
+        android:layout_width="80dp"
         android:text="@string/like"
         app:layout_constraintBaseline_toBaselineOf="@+id/replyButton2"
-        app:backgroundTint="@color/blue"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/replyButton2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
