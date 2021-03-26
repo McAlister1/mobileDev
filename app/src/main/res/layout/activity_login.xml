@@ -18,13 +18,13 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="match_parent"
+        android:layout_width="342dp"
         android:layout_height="wrap_content"
-        android:text="@string/Welcome"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"/>
+        android:layout_marginRight="25dp"
+        android:text="@string/Welcome"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -53,21 +53,20 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="@string/Login"
-        app:backgroundTint="#33C12E"
-        />
+        app:backgroundTint="#33C12E"/>
 
     <Button
         android:id="@+id/buttonForgottenUsername"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="@string/Forgotten_Username"
-        app:backgroundTint="#3F51B5" />
+        app:backgroundTint="@color/blue" />
 
     <Button
         android:id="@+id/buttonForgottenPassword"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="@string/Forgotten_Password"
-        app:backgroundTint="#3F51B5" />
+        app:backgroundTint="@color/blue" />
 
 </LinearLayout>

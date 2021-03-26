@@ -32,9 +32,9 @@
 
     <string name="forum">Forum</string>
     <string name="todo">TODO</string>
-    <string name="Welcome">Welcome to the University of Strathclyde \n Forum App!</string>
-    <string name="Username">Enter your Username</string>
-    <string name="Password">Enter your Password</string>
+    <string name="Welcome">Welcome to the University of Strathclyde Forum App!</string>
+    <string name="Username">Enter your Username - use <b>admin</b></string>
+    <string name="Password">Enter your Password - use <b>admin</b></string>
     <string name="Login_Details">Remember my Login Details</string>
     <string name="Login">Login Button</string>
     <string name="Forgotten_Username">Forgotten my Username</string>
