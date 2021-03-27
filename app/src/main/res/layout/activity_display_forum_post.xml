@@ -11,7 +11,20 @@
 
     <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent" android:id="@+id/forumText" app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.104" android:text="@string/Forumpage" android:layout_marginTop="28dp"/>
 
-    <EditText android:layout_height="123dp" android:layout_width="284dp" app:layout_constraintEnd_toEndOf="parent" android:id="@+id/editTextInitialQuestion" app:layout_constraintStart_toStartOf="parent" android:text="@string/ForumPostQuestion" android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/forumText" android:inputType="textMultiLine" android:gravity="start|top" android:ems="10"/>
+    <TextView
+        android:layout_height="123dp"
+        android:layout_width="284dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/editTextInitialQuestion"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/ForumPostQuestion"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/forumText"
+        android:inputType="textMultiLine"
+        android:gravity="start|top"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:ems="10"/>
 
     <Button android:layout_height="46dp" android:layout_width="74dp" app:layout_constraintEnd_toEndOf="@+id/editTextInitialQuestion" android:id="@+id/editPostButton" android:text="@string/editButtonText" app:layout_constraintBaseline_toBaselineOf="@+id/deleteButton" android:textColor="#0000FF" style="?android:attr/borderlessButtonStyle"/>
 
