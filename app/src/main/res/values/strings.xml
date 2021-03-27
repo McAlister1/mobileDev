@@ -3,6 +3,7 @@
     <string name="breadcrumbs.91">Select class / CS991 forum</string>
     <string name="breadcrumbs.select">Select class </string>
     <string name="breadcrumbs.forumPostDisplay">Select class / CS991 forum / post title</string>
+    <string name="breadcrumbs.AnnouncementDisplay">Select class / CS991 forum / Announcements </string>
     <string name="student_name">STUDENT NAME</string>
     <string name="announcements">Announcements</string>
     <string name="module_name">CS991</string>

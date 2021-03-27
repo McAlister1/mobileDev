@@ -21,7 +21,7 @@ public class ForumDisplay extends Activity {
     ArrayAdapter<CharSequence> studentAdapter;
     ArrayAdapter<CharSequence> filterAdapter;
     Button backToModuleSelBtn, addPostBtn;
-    ListView forumPostsDisplay;
+    ListView forumPostsDisplay, announcementsDisplay;
 
 
 
@@ -46,16 +46,36 @@ public class ForumDisplay extends Activity {
 
 
         //Fill Announcements display with dummy data for prototype visualisation
-        ListView announcementsDisplay = findViewById(R.id.announcementsDisplay);
-        ArrayList<String> announcements = new ArrayList<>();
-        announcements.add("Week 8: Coursework deadline extended 10/4/21");
-        announcements.add("Guest lecture - Jeff Besoz from Amazon Web Services.");
-        announcements.add("Week 7: videos available");
-        announcements.add("Changes to assignment");
-        announcements.add("Please submit coursework 1");
-        announcements.add("Welcome to CS991");
-        ArrayAdapter adapterAnnounce = new ArrayAdapter(this, android.R.layout.simple_list_item_1, announcements);
+        announcementsDisplay = findViewById(R.id.announcementsDisplay);
+        ArrayList<String> announcementTitles = new ArrayList<>();
+        ArrayList<String> announcementContent = new ArrayList<>();
+        announcementTitles.add(0,"Week 8: Coursework deadline extended");
+        announcementContent.add(0, "The submission for the final coursework has been extended after discussion till 10/4/21");
+        announcementTitles.add(1, "Guest lecture - Jeff Besoz from Amazon Web Services.");
+        announcementContent.add(1, "I hope you will attend as Jeff is a busy man with a business empire and dreams of world domination.");
+        announcementTitles.add(2, "Week 7: videos available");
+        announcementContent.add(2, "Sorry for the delay the videos are now available via the MyPlace");
+        announcementTitles.add(3, "Changes to assignment");
+        announcementContent.add(3, "I will announce changes on Monday's lecture");
+        announcementTitles.add(4,"Please submit coursework 1");
+        announcementContent.add(4, "Don't be lazy and submi your coursework on time!");
+        announcementTitles.add(5,"Welcome to CS991");
+        announcementContent.add(5, "In this module you will build cool mobile apps ENJOY!!!!");
+        ArrayAdapter adapterAnnounce = new ArrayAdapter(this, android.R.layout.simple_list_item_1, announcementTitles);
         announcementsDisplay.setAdapter(adapterAnnounce);
+        announcementsDisplay.setOnItemClickListener((parent, view, position, id) -> {
+            Intent displayAnnouncementIntent = new Intent(view.getContext(), AnnouncementsDisplay.class);
+
+            for(int i = 0; i <= 12; i++){
+                if(i == position){
+                    displayAnnouncementIntent.putExtra("Title", announcementTitles.get(i));
+                    displayAnnouncementIntent.putExtra("Content", announcementContent.get(i));
+                    break;
+                }
+            }
+            startActivity(displayAnnouncementIntent);
+
+        });
 
         forumPostsDisplay = findViewById(R.id.forumPostsDisplay);
 
