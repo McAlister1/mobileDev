@@ -33,7 +33,7 @@ public class SelectModule extends Activity {
     }
 
     private void openPostPage() {
-        Intent intent = new Intent(this, DisplayForumPost.class);
+        Intent intent = new Intent(this, ForumDisplay.class);
         startActivity(intent);
     }
 
