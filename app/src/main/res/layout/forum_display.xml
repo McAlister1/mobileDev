@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -140,13 +141,13 @@
         android:layout_marginBottom="2dp"
         android:orientation="horizontal">
 
-    <ListView
-        android:id="@+id/forumPostsDisplay"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/text_lines2"
-        >
-    </ListView>
+        <ListView
+            android:id="@+id/forumPostsDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/text_lines2"
+            >
+        </ListView>
     </RelativeLayout>
 
 
@@ -160,26 +161,27 @@
 
         <Button
             android:id="@+id/backToModuleSelButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
             android:layout_alignParentLeft="true"
+            android:layout_marginLeft="35dp"
+            android:onClick="backToModuleSelect"
             android:text="@string/back_button"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textStyle="bold"
-            android:layout_marginLeft="35dp"
-            android:onClick="backToModuleSelect"
-
-            />
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/addPost"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/add_button"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="35dp"
-            />
+            android:text="@string/add_button"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white" />
 
 
     </RelativeLayout>
