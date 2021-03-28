@@ -79,12 +79,7 @@
             android:textStyle="bold"
             android:layout_marginLeft="35dp"
             android:backgroundTint="@color/blue"
-            android:textColor="@color/white"
-
-
-            />
-
-
+            android:textColor="@color/white" />
 
     </RelativeLayout>
 
