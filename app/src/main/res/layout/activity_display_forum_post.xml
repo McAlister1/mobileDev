@@ -106,16 +106,16 @@
 
     <EditText
         android:id="@+id/editTextComment2"
-        android:layout_height="119dp"
         android:layout_width="279dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        android:text="@string/comment2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextComment1"
-        android:inputType="textMultiLine"
+        android:layout_height="119dp"
+        android:ems="10"
         android:gravity="start|top"
-        android:ems="10"/>
+        android:inputType="textMultiLine"
+        android:text="@string/comment2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextComment1" />
 
     <Button
         android:id="@+id/likeButton2"
@@ -157,5 +157,37 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/replyButton2"/>
 
+    <Button
+        android:id="@+id/buttonBackToForumDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextComment2"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/likeCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        app:layout_constraintEnd_toStartOf="@+id/likeButton2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextComment1"
+        app:layout_constraintTop_toTopOf="@+id/editTextComment1" />
+
+    <TextView
+        android:id="@+id/likeCounter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        app:layout_constraintEnd_toStartOf="@+id/likeButton"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="@+id/editTextComment2"
+        app:layout_constraintTop_toBottomOf="@+id/likeButton2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

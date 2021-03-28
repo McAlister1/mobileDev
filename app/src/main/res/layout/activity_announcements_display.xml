@@ -69,7 +69,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/backToModuleSelButton"
+            android:id="@+id/backToForumDisplayPageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -78,11 +78,8 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textStyle="bold"
             android:layout_marginLeft="35dp"
-
-
-            />
-
-
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white" />
 
     </RelativeLayout>
 

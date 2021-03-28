@@ -23,12 +23,6 @@ public class ForumDisplay extends Activity {
     Button backToModuleSelBtn, addPostBtn;
     ListView forumPostsDisplay, announcementsDisplay;
 
-
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
