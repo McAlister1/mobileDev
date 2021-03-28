@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ForumPrototype">
+
+        <activity android:name=".AnnouncementsDisplay"></activity>
+        <activity android:name=".AddPost" />
         <activity android:name=".ForumDisplay"></activity>
         <activity android:name=".SelectModule" />
         <activity android:name=".AddPost" />

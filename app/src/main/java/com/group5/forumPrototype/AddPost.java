@@ -9,14 +9,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class AddPost extends Activity {
 
 
-    public String postTitle;
-    public String postContent;
-    public TextView titleTextBox;
-    public TextView contentTextBox;
+    String postTitle;
+    String postContent;
+    TextView titleTextBox;
+    TextView contentTextBox;
     Button addPost2;
+    String postDate;
+    int countOpenForumDisplay;
 
 
     @Override
@@ -24,26 +30,28 @@ public class AddPost extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_post);
 
+
         //add post
         addPost2 = findViewById(R.id.addPost);
 
         titleTextBox=findViewById(R.id.postTitle);
         contentTextBox=findViewById(R.id.postContent);
-        addPost2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // variables that catch the values filled on textbox
-                postTitle=(String)titleTextBox.getText();
-                postContent=(String)contentTextBox.getText();
-                addButton2();
-            }
+        addPost2.setOnClickListener(v -> {
+            Intent addPostIntent = new Intent(this, ForumDisplay.class);
+            // variables that catch the values filled on textbox
+            postTitle = titleTextBox.getText().toString();
+            postContent = contentTextBox.getText().toString();
+            //String postAuthor = "STUDENT NAME";
+            postDate =  new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+            addPostIntent.putExtra("Title", postTitle);
+            addPostIntent.putExtra("Content", postContent);
+            addPostIntent.putExtra("Author", "STUDENT NAME");
+            addPostIntent.putExtra("Date", postDate);
+
+
+            startActivity(addPostIntent);
         });
     }
 
-    public void addButton2() {
 
-        // must be changed , redirect to a new page including the new post on ForumDisplay
-        Intent addPostIntent = new Intent(this, ForumDisplay.class);
-        startActivity(addPostIntent);
-    }
 }

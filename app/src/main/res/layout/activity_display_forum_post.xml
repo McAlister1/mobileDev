@@ -23,6 +23,7 @@
 
 </RelativeLayout>
 
+
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
@@ -45,8 +46,10 @@
         app:layout_constraintTop_toBottomOf="@+id/forumText"
         android:inputType="textMultiLine"
         android:gravity="start|top"
+        android:textStyle="bold"
+        android:textSize="20dp"
         android:ems="10"/>
-
+      
     <Button
         android:layout_height="45dp"
         android:layout_width="80dp"
@@ -153,5 +156,6 @@
         android:backgroundTint="@color/blue"
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/replyButton2"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
