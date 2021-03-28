@@ -78,6 +78,14 @@ public class ForumDisplay extends Activity {
             }
         });
 
+
+        addPostBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addButton();
+            }
+        });
+
     }
 
 
@@ -87,7 +95,7 @@ public class ForumDisplay extends Activity {
         startActivity(openModuleSel);
     }
 
-    public void addButton(View view) {
+    public void addButton() {
         Intent addPostIntent = new Intent(this, AddPost.class);
         startActivity(addPostIntent);
     }
