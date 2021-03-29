@@ -13,6 +13,7 @@ public class SelectModule extends Activity {
     Spinner studentSpinner;
     ArrayAdapter<CharSequence> studentAdapter;
     Button cs991Button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,12 +25,18 @@ public class SelectModule extends Activity {
             public void onClick(View v) {
                 openPostPage();
             }
+
+
+
         });
 
         studentSpinner = (Spinner) findViewById(R.id.studentSpinner);
         studentAdapter = ArrayAdapter.createFromResource(this, R.array.student_spinner, android.R.layout.simple_spinner_item);
         studentAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         studentSpinner.setAdapter(studentAdapter);
+
+
+
     }
 
     private void openPostPage() {
