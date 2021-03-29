@@ -29,7 +29,7 @@ public class DisplayForumPost extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_forum_post);
 
-        studentSpinner = (Spinner) findViewById(R.id.studentSpinner);
+        studentSpinner = (Spinner) findViewById(R.id.selectModuleStudentSpinner);
         studentAdapter = ArrayAdapter.createFromResource(this, R.array.student_spinner, android.R.layout.simple_spinner_item);
         studentAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         studentSpinner.setAdapter(studentAdapter);

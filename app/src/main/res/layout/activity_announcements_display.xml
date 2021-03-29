@@ -27,7 +27,7 @@
 
 
         <Spinner
-            android:id="@+id/studentSpinner"
+            android:id="@+id/selectModuleStudentSpinner"
             android:layout_alignParentEnd="true"
             android:entries="@array/student_spinner"
             android:padding="5dp"
