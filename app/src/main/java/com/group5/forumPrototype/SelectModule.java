@@ -30,8 +30,8 @@ public class SelectModule extends Activity {
 
         });
 
-        studentSpinner = (Spinner) findViewById(R.id.studentSpinner);
-        studentAdapter = ArrayAdapter.createFromResource(this, R.array.student_spinner, android.R.layout.simple_spinner_item);
+        studentSpinner = (Spinner) findViewById(R.id.selectModuleStudentSpinner);
+        studentAdapter = ArrayAdapter.createFromResource(this, R.array.selectModuleSpinner, android.R.layout.simple_spinner_item);
         studentAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         studentSpinner.setAdapter(studentAdapter);
 

@@ -4,6 +4,7 @@
     <string name="breadcrumbs.select">Select class </string>
     <string name="breadcrumbs.forumPostDisplay">Select class / CS991 forum / post title</string>
     <string name="breadcrumbs.AnnouncementDisplay">Select class / CS991 forum / Announcements </string>
+    <string name="breadcrumbs.PostDisplayPage">Select class / CS991 forum / Post </string>
     <string name="student_name">STUDENT NAME</string>
     <string name="announcements">Announcements</string>
     <string name="module_name">CS991</string>
@@ -19,6 +20,14 @@
         <item>Settings</item>
         <item>Logout</item>
     </string-array>
+
+    <string-array name="selectModuleSpinner">
+        <item>STUDENT NAME ▼</item>
+        <item>Select class</item>
+        <item>Settings</item>
+        <item>Logout</item>
+    </string-array>
+
     <string-array name="filter_spinner">
         <item>Filter Posts ▼</item>
         <item>Date</item>

@@ -1,18 +1,13 @@
 package com.group5.forumPrototype;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -28,7 +23,7 @@ public class ForumDisplay extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.forum_display);
 
-        studentSpinner = (Spinner) findViewById(R.id.studentSpinner);
+        studentSpinner = (Spinner) findViewById(R.id.selectModuleStudentSpinner);
         studentAdapter = ArrayAdapter.createFromResource(this, R.array.student_spinner, android.R.layout.simple_spinner_item);
         studentAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         studentSpinner.setAdapter(studentAdapter);
