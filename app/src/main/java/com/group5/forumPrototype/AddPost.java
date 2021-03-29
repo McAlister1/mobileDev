@@ -20,7 +20,7 @@ public class AddPost extends Activity {
     String postContent;
     TextView titleTextBox;
     TextView contentTextBox;
-    Button addPost2;
+    Button addPost2, backButton;
     String postDate;
     int countOpenForumDisplay;
 
@@ -50,7 +50,30 @@ public class AddPost extends Activity {
 
 
             startActivity(addPostIntent);
+
+
         });
+
+        /**
+         * Code for the back button to return the user to the forum display page.
+         */
+        backButton = findViewById(R.id.backToModuleSelButton);
+        backButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                returnToForumDisplay();
+            }
+        });
+
+    }
+
+    /**
+     * Method that is implemented for the on click listener in the onCreate method that directs the
+     * app to the correct page.
+     */
+    public void returnToForumDisplay() {
+        Intent intent = new Intent(this, ForumDisplay.class);
+        startActivity(intent);
     }
 
 

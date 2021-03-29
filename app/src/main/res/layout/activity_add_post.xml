@@ -101,9 +101,8 @@
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textStyle="bold"
-            app:backgroundTint="@color/blue"
-
-            />
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/addPost"
@@ -112,7 +111,8 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="35dp"
             android:text="@string/add_button"
-            app:backgroundTint="@color/blue" />
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white" />
 
 
     </RelativeLayout>
