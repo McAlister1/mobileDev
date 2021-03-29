@@ -3,6 +3,7 @@ package com.group5.forumPrototype;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +15,9 @@ public class Login extends AppCompatActivity {
     EditText username, password;
     Button login;
     boolean isUsernameValid, isPasswordValid;
-
+    Button loginBtn;
+    Button forgotEmailBtn;
+    Button forgotPassnBtn;
     /**
      * OnCreate Method that links the text boxes to the xml and login button to the xml
      * Then it implements the method for logging in
@@ -35,6 +38,57 @@ public class Login extends AppCompatActivity {
                 CheckCredentials();
             }
         });
+
+
+        loginBtn = findViewById(R.id.buttonLogin);
+        forgotEmailBtn = findViewById(R.id.buttonForgottenUsername);
+        forgotPassnBtn = findViewById(R.id.buttonForgottenPassword);
+        //event is generated when the user clicks login button
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                //back to homepage with elements initialized
+                Intent intent= new Intent(Login.this,SelectModule.class);
+                startActivity(intent);
+
+            }
+
+
+        });
+
+        forgotEmailBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                //redirect the user to recover password page
+                Intent intent= new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.strath.ac.uk/professionalservices/it/use/password/"));
+                startActivity(intent);
+
+            }
+
+
+        });
+
+        forgotPassnBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                //redirect the user to recover password page
+                Intent intent= new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.strath.ac.uk/professionalservices/it/use/password/"));
+                startActivity(intent);
+
+
+            }
+
+
+        });
+
+
+
     }
 
     /**
