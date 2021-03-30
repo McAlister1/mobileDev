@@ -17,6 +17,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import static android.widget.Toast.LENGTH_SHORT;
+
 public class AddPost extends Activity {
 
 
@@ -54,6 +56,7 @@ public class AddPost extends Activity {
             addPostIntent.putExtra("Author", "STUDENT NAME");
             addPostIntent.putExtra("Date", postDate);
 
+            Toast.makeText(getApplicationContext(), "Adding post to CS991 forum!", LENGTH_SHORT).show();
 
             startActivity(addPostIntent);
 
