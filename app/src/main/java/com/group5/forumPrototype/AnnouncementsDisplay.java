@@ -5,12 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AnnouncementsDisplay extends AppCompatActivity {
     TextView display;
     Button backButton;
+    Spinner studentSpinner;
+    ArrayAdapter<CharSequence> studentAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,16 @@ public class AnnouncementsDisplay extends AppCompatActivity {
                 returnToForumDisplay();
             }
         });
+
+        studentSpinner = (Spinner) findViewById(R.id.studentSpinner);
+        studentAdapter = ArrayAdapter.createFromResource(this, R.array.student_spinner, android.R.layout.simple_spinner_item);
+        studentAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        studentSpinner.setAdapter(studentAdapter);
+
+        /**
+         * Code to make logout option work within spinner.
+         */
+        logoutFromSpinner();
     }
 
     /**
@@ -44,5 +60,34 @@ public class AnnouncementsDisplay extends AppCompatActivity {
     public void returnToForumDisplay() {
         Intent intent = new Intent(this, ForumDisplay.class);
         startActivity(intent);
+    }
+
+    /**
+     * Method that is implemented from within the onCreate to make the logout option work.
+     */
+    private void logoutFromSpinner() {
+        studentSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (parent.getItemAtPosition(position).equals("STUDENT NAME ▼")){
+                    //do nothing
+                } else{
+                    String item = parent.getItemAtPosition(position).toString();
+
+                    //SHow selected spinner item
+                    Toast.makeText(parent.getContext(), "Selected:"+ item, Toast.LENGTH_SHORT).show();
+
+                    if (parent.getItemAtPosition(position).equals("Logout")){
+                        Intent intent = new Intent(AnnouncementsDisplay.this, Login.class);
+                        startActivity(intent);
+                    }
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 }

@@ -30,8 +30,11 @@ public class Login extends AppCompatActivity {
 
         username = (EditText)findViewById(R.id.editTextTextPersonName);
         password = (EditText)findViewById(R.id.editTextTextPassword);
-        login = (Button)findViewById(R.id.buttonLogin);
 
+        /**
+         * This section uses the method to check the credentials before allowing the user to login
+         */
+        login = (Button)findViewById(R.id.buttonLogin);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +46,7 @@ public class Login extends AppCompatActivity {
         loginBtn = findViewById(R.id.buttonLogin);
         forgotEmailBtn = findViewById(R.id.buttonForgottenUsername);
         forgotPassnBtn = findViewById(R.id.buttonForgottenPassword);
+
         //event is generated when the user clicks login button
         loginBtn.setOnClickListener(new View.OnClickListener() {
 
