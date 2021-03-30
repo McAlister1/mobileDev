@@ -199,9 +199,9 @@
         android:id="@+id/likeCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toStartOf="@+id/likeButton2"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.848"
         app:layout_constraintStart_toStartOf="@+id/editTextComment1"
         app:layout_constraintTop_toTopOf="@+id/editTextComment1" />
 
@@ -209,9 +209,10 @@
         android:id="@+id/likeCounter2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextComment2"
         app:layout_constraintEnd_toStartOf="@+id/likeButton"
-        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintHorizontal_bias="0.848"
         app:layout_constraintStart_toStartOf="@+id/editTextComment2"
         app:layout_constraintTop_toBottomOf="@+id/likeButton2" />
 
