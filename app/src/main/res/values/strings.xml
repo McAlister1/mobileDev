@@ -11,7 +11,9 @@
     <string name="forum_posts">Forum Posts</string>
     <string name="back_button">←</string>
     <string name="add_button">Add post</string>
+    <string name="add">Add</string>
     <string name="edit_button">Edit post</string>
+    <string name="addComment">Add a Comment</string>
     <string-array name="student_spinner">
         <item>STUDENT NAME ▼</item>
         <item>Select class</item>
