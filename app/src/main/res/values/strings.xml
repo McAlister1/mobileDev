@@ -34,6 +34,12 @@
         <item>Popular</item>
         <item>Read</item>
     </string-array>
+
+    <string-array name="filter_spinner_comments">
+        <item>Filter ▼</item>
+        <item>Date</item>
+        <item>Popular</item>
+    </string-array>
     <string-array name="announcements_display">
         <item>Announcement 1</item>
         <item>Announcement 2</item>
@@ -42,15 +48,15 @@
 
     <string name="forum">Forum</string>
     <string name="todo">TODO</string>
-    <string name="Welcome">Welcome to the University of Strathclyde Forum App!</string>
-    <string name="Username">Enter your Username - use <b>admin</b></string>
-    <string name="Password">Enter your Password - use <b>admin</b></string>
+    <string name="Welcome">Welcome to the University of Strathclyde \n \t \t \t \t \t \t \t \t  <b>Forum App!</b></string>
+    <string name="Username">Enter your Username</string>
+    <string name="Password">Enter your Password</string>
     <string name="Login_Details">Remember my Login Details</string>
-    <string name="Login">Login Button</string>
+    <string name="Login">Login</string>
     <string name="Forgotten_Username">Forgotten my Username</string>
     <string name="Forgotten_Password">Forgotten my Password</string>
 
-
+    <!--<b>admin</b>-->
     <string name="SelectModule">Select Module</string>
 
     <string name="CS991">CS991 - Mobile App Development</string>
@@ -99,11 +105,14 @@
 
     </string-array>
 
+    <string name="title_hint">Post title</string>
+    <string name="content_hint">Post content</string>
+
 
     -
     <string name="comment1">
-Hi Joe, you could try this approach...\n
-<i>Sarah Brown</i>
+Hi, you could try this approach...\n
+<i>Grant Jones </i> [19-03-21]
 
 </string>
 
@@ -111,7 +120,7 @@ Hi Joe, you could try this approach...\n
     -
     <string name="comment2">
 I tried ... and it worked \n
-<i>Natalie Smith</i>
+<i>Natalie Smith</i>[20-03-21]
 
 </string>
 

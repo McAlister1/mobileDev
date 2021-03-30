@@ -36,7 +36,7 @@ public class DisplayForumPost extends Activity {
 
         //Grab intent from list view and put into single string to be displayed
         Bundle extras = getIntent().getExtras();
-        String post = extras.getString("Title") + "\n" + extras.getString("Author") + " " + extras.getString("Date") + "\n \t" + extras.getString("Content");
+        String post = extras.getString("Title").toUpperCase() + "\n" + extras.getString("Author") + " " + extras.getString("Date") + "\n \n" + extras.getString("Content");
 
         postTitleAndContent = findViewById(R.id.editTextInitialQuestion);
        //editTextComment = findViewById(R.id.editTextComment1);

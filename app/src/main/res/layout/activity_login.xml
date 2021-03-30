@@ -12,17 +12,17 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="150dp"
         app:srcCompat="@drawable/university_of_strathclyde_logo"
         android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="342dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:text="@string/Welcome"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
@@ -46,26 +46,35 @@
         android:id="@+id/checkBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Login_Details" />
+        android:text="@string/Login_Details"
+        android:layout_gravity="center"
+        />
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="@string/Login"
-        app:backgroundTint="#33C12E"/>
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:backgroundTint="#33C12E"
+        android:layout_marginBottom="10dp"/>
 
     <Button
         android:id="@+id/buttonForgottenUsername"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
         android:text="@string/Forgotten_Username"
         app:backgroundTint="@color/blue" />
 
     <Button
         android:id="@+id/buttonForgottenPassword"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
         android:text="@string/Forgotten_Password"
         app:backgroundTint="@color/blue" />
 
