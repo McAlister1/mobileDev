@@ -44,52 +44,46 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp">
+        android:layout_marginBottom="10dp">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="105dp">
+            android:layout_height="wrap_content"
+            android:id="@+id/postTitle"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            android:hint="@string/title_hint"
+            android:background="@color/grey"
+            android:gravity="center"
+            android:padding="20dp"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/postTitle"
-                android:layout_width="350dp"
-                android:layout_height="58dp"
-                android:hint="@string/title_hint"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
     </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:layout_weight="1"
         android:layout_marginLeft="25dp">
 
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:id="@+id/postContent"
+            android:layout_height="250dp"
+            android:hint="@string/content_hint"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:layout_marginRight="25dp"
+            android:background="@color/grey"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/postContent"
-                android:layout_width="350dp"
-                android:layout_height="250dp"
-                android:hint="@string/content_hint"
-                android:textStyle="italic"
-                android:layout_marginRight="25dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
-
-
-
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="20dp"
         android:orientation="horizontal">
 

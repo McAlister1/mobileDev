@@ -122,13 +122,15 @@ Hi, you could try this approach...\n
     -
     <string name="comment2">
 I tried ... and it worked \n
-<i>Natalie Smith</i>[20-03-21]
+<i>Natalie Smith</i> [20-03-21]
 
 </string>
 
     <string name="reply">Reply</string>
 
     <string name="like">Like</string>
+
+    <string name="no_comments"><i>No comments added yet!</i></string>
 
 
 </resources>

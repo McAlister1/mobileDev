@@ -20,10 +20,10 @@ public class DisplayForumPost extends Activity {
     Spinner studentSpinner;
     ArrayAdapter<CharSequence> studentAdapter;
     TextView postTitleAndContent;
-    Button backButton, likeButton, likeButton2;
+    Button backButton, likeButton, likeButton2, replyButton, replyButton2, editButton, deleteButton;
     int count1, count2 = 0;
     boolean pressed, pressed2 = false;
-    //TextView editTextComment;
+    TextView comment1, comment2;
 
 
     @Override
@@ -35,13 +35,34 @@ public class DisplayForumPost extends Activity {
         studentAdapter = ArrayAdapter.createFromResource(this, R.array.student_spinner, android.R.layout.simple_spinner_item);
         studentAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         studentSpinner.setAdapter(studentAdapter);
-
+        likeButton = findViewById(R.id.likeButton);
+        likeButton2 = findViewById(R.id.likeButton2);
+        editButton = findViewById(R.id.editPostButton);
+        deleteButton = findViewById(R.id.deleteButton);
+        comment1 = findViewById(R.id.editTextComment1);
+        comment2 = findViewById(R.id.editTextComment2);
+        replyButton = findViewById(R.id.replyButton);
+        replyButton2 = findViewById(R.id.replyButton2);
         //Grab intent from list view and put into single string to be displayed
         Bundle extras = getIntent().getExtras();
+        if(extras.getString("Title").equals("JavaDocs in Android Studio?") || extras.getString("Title").equals("Question 4 help!!!")){
+            deleteButton.setVisibility(View.INVISIBLE);
+            editButton.setVisibility(View.INVISIBLE);
+        }
+
+        if(extras.getString("Author").equals("STUDENT NAME")){
+            comment1.setText(R.string.no_comments);
+            likeButton.setVisibility(View.INVISIBLE);
+            replyButton.setVisibility(View.INVISIBLE);
+            comment2.setVisibility(View.INVISIBLE);
+            replyButton2.setVisibility(View.INVISIBLE);
+            likeButton2.setVisibility(View.INVISIBLE);
+        }
+
         String post = extras.getString("Title").toUpperCase() + "\n" + extras.getString("Author") + " " + extras.getString("Date") + "\n \n" + extras.getString("Content");
 
         postTitleAndContent = findViewById(R.id.editTextInitialQuestion);
-       //editTextComment = findViewById(R.id.editTextComment1);
+        //editTextComment = findViewById(R.id.editTextComment1);
         //String comment = extras.getString("Comments");
 
         //Display new added post
@@ -62,8 +83,7 @@ public class DisplayForumPost extends Activity {
         /**
          * Code for the like button to add a like to the post.
          */
-        likeButton = findViewById(R.id.likeButton);
-        likeButton2 = findViewById(R.id.likeButton2);
+
         likeButton.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View v) {
