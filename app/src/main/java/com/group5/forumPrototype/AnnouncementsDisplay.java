@@ -1,3 +1,9 @@
+/**
+ *This is the activity for displaying the announcements in the forum.
+ *
+ * version: 30/03/2021
+ */
+
 package com.group5.forumPrototype;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,7 +31,9 @@ public class AnnouncementsDisplay extends AppCompatActivity {
 
         display = findViewById(R.id.announcementsDisplayText);
 
-        //Grab intent from list view and put into single string to be displayed
+        /**
+         * Displays the announcement title and content in a TextView.
+         */
         Bundle extras = getIntent().getExtras();
         String announcement = extras.getString("Title") + "\n \n" + extras.getString("Content");
         display.setText(announcement);

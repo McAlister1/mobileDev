@@ -1,6 +1,10 @@
-package com.group5.forumPrototype;
+/**
+ *This is the activity for adding a post to class the forum. New posts wil be added to forum display.
+ *
+ * version: 30/03/2021
+ */
 
-import androidx.appcompat.app.AppCompatActivity;
+package com.group5.forumPrototype;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,11 +16,9 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-
 import static android.widget.Toast.LENGTH_SHORT;
 
 public class AddPost extends Activity {
@@ -38,18 +40,18 @@ public class AddPost extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_post);
 
-
-        //add post
         addPost2 = findViewById(R.id.addPost);
-
         titleTextBox=findViewById(R.id.postTitle);
         contentTextBox=findViewById(R.id.postContent);
+
+        /**
+         * The onClickListener will take the text input and ad them to the intent which opens
+         * the forum where the post will be added.
+         */
         addPost2.setOnClickListener(v -> {
             Intent addPostIntent = new Intent(this, ForumDisplay.class);
-            // variables that catch the values filled on textbox
             postTitle = titleTextBox.getText().toString();
             postContent = contentTextBox.getText().toString();
-            //String postAuthor = "STUDENT NAME";
             postDate =  new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
             addPostIntent.putExtra("Title", postTitle);
             addPostIntent.putExtra("Content", postContent);
