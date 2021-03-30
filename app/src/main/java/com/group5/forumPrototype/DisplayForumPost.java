@@ -1,3 +1,9 @@
+/**
+ * Class to display the individual forum posts and comments in a module .
+ *
+ * Version 30/03/2021
+ */
+
 package com.group5.forumPrototype;
 
 
@@ -12,9 +18,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/**
- * Class to display the individual forum posts and comments.
- */
+
 public class DisplayForumPost extends Activity {
 
     Spinner studentSpinner;
@@ -25,7 +29,12 @@ public class DisplayForumPost extends Activity {
     boolean pressed, pressed2 = false;
     TextView comment1, comment2;
 
-
+    /**
+     * This method loads the activity_forum_post.xml. It displays the selected post and allows users
+     * to like, reply or comment on posts. User can edit or delete their own posts.
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,11 +54,19 @@ public class DisplayForumPost extends Activity {
         replyButton2 = findViewById(R.id.replyButton2);
         //Grab intent from list view and put into single string to be displayed
         Bundle extras = getIntent().getExtras();
+
+
+         /*The activity will display 'fake posts' from other users for prototype visualisation purposes
+         * the logged in user wouldn't be able to edit or delete another users posts. The edit and delete button
+         * have been hidden for these posts. Functionality, to make this  work dynamically will be added in the future.*/
         if(extras.getString("Title").equals("JavaDocs in Android Studio?") || extras.getString("Title").equals("Question 4 help!!!")){
             deleteButton.setVisibility(View.INVISIBLE);
             editButton.setVisibility(View.INVISIBLE);
         }
 
+
+        /*Adding a new post wouldn't have any comments to begin with. These have been hidden for
+         * prototype visualisation. Again functionality to do this dynamically would be added in the future.*/
         if(extras.getString("Author").equals("STUDENT NAME")){
             comment1.setText(R.string.no_comments);
             likeButton.setVisibility(View.INVISIBLE);
@@ -59,19 +76,16 @@ public class DisplayForumPost extends Activity {
             likeButton2.setVisibility(View.INVISIBLE);
         }
 
+        //Make new post into single display string
         String post = extras.getString("Title").toUpperCase() + "\n" + extras.getString("Author") + " " + extras.getString("Date") + "\n \n" + extras.getString("Content");
 
         postTitleAndContent = findViewById(R.id.editTextInitialQuestion);
-        //editTextComment = findViewById(R.id.editTextComment1);
-        //String comment = extras.getString("Comments");
-
-        //Display new added post
         postTitleAndContent.setText(post);
-        //editTextComment.setText(comment);
 
-        /**
-         * Code for the back button to return the user to the forum display page.
-         */
+
+
+
+        //Code for the back button to return the user to the forum display page.
         backButton = findViewById(R.id.buttonBackToForumDisplay);
         backButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -80,10 +94,8 @@ public class DisplayForumPost extends Activity {
             }
         });
 
-        /**
-         * Code for the like button to add a like to the post.
-         */
 
+         //Code for the like button to add a like to the post.
         likeButton.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,9 +118,8 @@ public class DisplayForumPost extends Activity {
             }
         });
 
-        /**
-         * Code to make logout option work within spinner.
-         */
+
+         // Code to make logout option work within spinner.
         logoutFromSpinner();
     }
 

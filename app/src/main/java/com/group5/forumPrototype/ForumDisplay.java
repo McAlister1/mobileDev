@@ -1,3 +1,9 @@
+/**
+ * An activity that displays all the announcements and posts in a forum
+ *
+ * Version 30/03/2021
+ */
+
 package com.group5.forumPrototype;
 
 import android.app.Activity;
@@ -20,10 +26,18 @@ public class ForumDisplay extends Activity {
     Button backToModuleSelBtn, addPostBtn;
     ListView forumPostsDisplay, announcementsDisplay;
 
+
+    /**
+     * This method loads the forum_display.xml. It displays announcements and posts in the forum in
+     * a ListView and allows user to click on posts or announcements.
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.forum_display);
+
 
         studentSpinner = (Spinner) findViewById(R.id.studentSpinner);
         studentAdapter = ArrayAdapter.createFromResource(this, R.array.student_spinner, android.R.layout.simple_spinner_item);
@@ -36,7 +50,8 @@ public class ForumDisplay extends Activity {
         filterSpinner.setAdapter(filterAdapter);
 
 
-        //Fill Announcements display with dummy data for prototype visualisation
+
+        //This will fill Announcements display with 'fake data' for prototype visualisation purposes.
         announcementsDisplay = findViewById(R.id.announcementsDisplay);
         ArrayList<String> announcementTitles = new ArrayList<>();
         ArrayList<String> announcementContent = new ArrayList<>();
@@ -54,6 +69,9 @@ public class ForumDisplay extends Activity {
         announcementContent.add(5, "In this module you will build cool mobile apps ENJOY!!!!");
         ArrayAdapter adapterAnnounce = new ArrayAdapter(this, android.R.layout.simple_list_item_1, announcementTitles);
         announcementsDisplay.setAdapter(adapterAnnounce);
+
+
+         //A method to take the user to the announcement they have selected.
         announcementsDisplay.setOnItemClickListener((parent, view, position, id) -> {
             Intent displayAnnouncementIntent = new Intent(view.getContext(), AnnouncementsDisplay.class);
 
@@ -84,16 +102,15 @@ public class ForumDisplay extends Activity {
         addPostBtn = findViewById(R.id.addPost);
 
 
+         //A method to take the user to the to the selected post in the forum
         forumPostsDisplay.setOnItemClickListener((parent, view, position, id) -> {
             Intent displayForumPostIntent = new Intent(view.getContext(), DisplayForumPost.class);
 
             for(int i = 0; i <= 12; i++){
                 if(i == position){
-                    //displayForumPostIntent.putExtra("Title", forumPostTitles.get(i));
                     displayForumPostIntent.putExtra("Title", ListHolder.getInstance().forumPostsListTitle.get(i));
                     displayForumPostIntent.putExtra("Author", ListHolder.getInstance().forumPostAuthor.get(i));
                     displayForumPostIntent.putExtra("Date", ListHolder.getInstance().forumPostDate.get(i));
-                    //displayForumPostIntent.putExtra("Comments", forumPostComments.get(i));
                     displayForumPostIntent.putExtra("Content", ListHolder.getInstance().forumPostsListContent.get(i));
                     break;
                 }
@@ -105,9 +122,8 @@ public class ForumDisplay extends Activity {
 
         addPostBtn.setOnClickListener(v -> addButton());
 
-        /**
-         * Code to make logout option work within spinner.
-         */
+
+         //Code to make logout option work within spinner.
         logoutFromSpinner();
 
     }
@@ -124,7 +140,9 @@ public class ForumDisplay extends Activity {
         startActivity(addPostIntent);
     }
 
-    //Start application with some fake posts for visualisation purposes
+    /**
+     * A method to add 'fake posts' to the forum display for prototype visualisation purposes
+     */
     public void addFakePostsOnStart(){
         if(ListHolder.getInstance().forumDisplayString.size() == 0){
             //Fake post 1
@@ -143,6 +161,9 @@ public class ForumDisplay extends Activity {
         }
     }
 
+    /**
+     * A method to add posts to the ArrayLists for post information.
+     */
     public void addPostToList() {
         if (getIntent().getExtras() != null) {
             Bundle extras = getIntent().getExtras();

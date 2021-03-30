@@ -24,6 +24,13 @@ public class AnnouncementsDisplay extends AppCompatActivity {
     Spinner studentSpinner;
     ArrayAdapter<CharSequence> studentAdapter;
 
+
+    /**
+     * This method loads the activity_announcements_display.xml and displays the selected
+     * announcement by the user.
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,17 +38,14 @@ public class AnnouncementsDisplay extends AppCompatActivity {
 
         display = findViewById(R.id.announcementsDisplayText);
 
-        /**
-         * Displays the announcement title and content in a TextView.
-         */
+         //Displays the announcement title and content in a TextView.
         Bundle extras = getIntent().getExtras();
         String announcement = extras.getString("Title") + "\n \n" + extras.getString("Content");
         display.setText(announcement);
 
-        /**
-         * Code for the back button to return the user to the forum display page.
-         * Calls method from DisplayForumPost class.
-         */
+
+         /*Code for the back button to return the user to the forum display page.
+         Calls method from DisplayForumPost class.*/
         backButton = findViewById(R.id.backToForumDisplayPageButton);
         backButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -55,9 +59,7 @@ public class AnnouncementsDisplay extends AppCompatActivity {
         studentAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         studentSpinner.setAdapter(studentAdapter);
 
-        /**
-         * Code to make logout option work within spinner.
-         */
+        //Code to make logout option work within spinner.
         logoutFromSpinner();
     }
 

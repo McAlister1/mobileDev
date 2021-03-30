@@ -1,3 +1,10 @@
+/**
+ * This activity is the first activity in the application. It allows users to login
+ * to the app to view posts and announcements for there university modules.
+ *
+ * version 30/03/2021
+ */
+
 package com.group5.forumPrototype;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +24,7 @@ public class Login extends AppCompatActivity {
     boolean isUsernameValid, isPasswordValid;
     Button loginBtn;
     Button forgotEmailBtn;
-    Button forgotPassnBtn;
+    Button forgotPassBtn;
     /**
      * OnCreate Method that links the text boxes to the xml and login button to the xml
      * Then it implements the method for logging in
@@ -45,7 +52,7 @@ public class Login extends AppCompatActivity {
 
         loginBtn = findViewById(R.id.buttonLogin);
         forgotEmailBtn = findViewById(R.id.buttonForgottenUsername);
-        forgotPassnBtn = findViewById(R.id.buttonForgottenPassword);
+        forgotPassBtn = findViewById(R.id.buttonForgottenPassword);
 
         //event is generated when the user clicks login button
         loginBtn.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +83,7 @@ public class Login extends AppCompatActivity {
 
         });
 
-        forgotPassnBtn.setOnClickListener(new View.OnClickListener() {
+        forgotPassBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {

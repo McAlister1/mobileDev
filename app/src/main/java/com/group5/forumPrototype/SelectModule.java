@@ -1,3 +1,10 @@
+/**
+ * This activity allows the user to select the module that they would like to see
+ * announcements and posts for.
+ *
+ * Version 30/03/2021
+ */
+
 package com.group5.forumPrototype;
 
 import android.app.Activity;
@@ -10,24 +17,26 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-/**
- * Class for Select module page, code in here is for the spinner and for the select class buttons to direct
- * the user to the desired page.
- */
+
 public class SelectModule extends Activity {
 
     Spinner studentSpinner;
     ArrayAdapter<CharSequence> studentAdapter;
     Button cs991Button;
 
+    /**
+     * This method loads the activity_select_module.xml and allows user to select the module forum
+     * they wish to see.
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_module);
 
-        /**
-         * Code to direct the cs991 button to the forum page
-         */
+
+         //Code to direct the cs991 button to the forum page
         cs991Button = findViewById(R.id.CS991Button);
         cs991Button.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -44,9 +53,8 @@ public class SelectModule extends Activity {
         studentAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         studentSpinner.setAdapter(studentAdapter);
 
-        /**
-         * Code to make logout option work within spinner.
-         */
+
+         //Code to make logout option work within spinner.
         logoutFromSpinner();
 
 

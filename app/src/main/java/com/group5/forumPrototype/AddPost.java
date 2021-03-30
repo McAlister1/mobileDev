@@ -22,8 +22,6 @@ import java.util.Locale;
 import static android.widget.Toast.LENGTH_SHORT;
 
 public class AddPost extends Activity {
-
-
     String postTitle;
     String postContent;
     TextView titleTextBox;
@@ -32,9 +30,12 @@ public class AddPost extends Activity {
     String postDate;
     Spinner studentSpinner;
     ArrayAdapter<CharSequence> studentAdapter;
-    int countOpenForumDisplay;
 
-
+    /**
+     * Loads the activity_add_post.xml and includes code to add posts to the forum.
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,10 +45,9 @@ public class AddPost extends Activity {
         titleTextBox=findViewById(R.id.postTitle);
         contentTextBox=findViewById(R.id.postContent);
 
-        /**
-         * The onClickListener will take the text input and ad them to the intent which opens
-         * the forum where the post will be added.
-         */
+
+         /*The onClickListener will take the text input and ad them to the intent which opens
+         * the forum where the post will be added.*/
         addPost2.setOnClickListener(v -> {
             Intent addPostIntent = new Intent(this, ForumDisplay.class);
             postTitle = titleTextBox.getText().toString();
@@ -65,9 +65,8 @@ public class AddPost extends Activity {
 
         });
 
-        /**
-         * Code for the back button to return the user to the forum display page.
-         */
+
+        //Code for the back button to return the user to the forum display page.
         backButton = findViewById(R.id.backToModuleSelButton);
         backButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -81,9 +80,8 @@ public class AddPost extends Activity {
         studentAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         studentSpinner.setAdapter(studentAdapter);
 
-        /**
-         * Code to make logout option work within spinner.
-         */
+
+        //Code to make logout option work within spinner.
         logoutFromSpinner();
 
     }
